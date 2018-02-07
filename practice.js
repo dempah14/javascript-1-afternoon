@@ -19,7 +19,11 @@ var name = 'Tyler';
 
 //Code Here
 
+function isTyler (name) {
+  return name == 'Tyler' ? true : false; 
+}
 
+console.log(isTyler('Tyler'));
 
 ////////// PROBLEM 2 //////////
 
@@ -29,6 +33,10 @@ var name = 'Tyler';
 
 //Code Here
 
+function getName() {
+  var name = prompt('name');
+  return name;
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -42,16 +50,19 @@ var name = 'Tyler';
 
 //Code Here
 
+function welcome() {
+  alert('Welcome, ' + getName());
+}
 
 
-////////// PROBLEM 4 //////////
+ ////////// PROBLEM 4 //////////
 
 /*
   What is the difference between arguments and parameters?
 */
 
 //Answer Here
-
+//An argument expects the result to be either true or false where as parameters results are limited based on the confinements given
 
 
 ////////// PROBLEM 5 //////////
@@ -72,6 +83,9 @@ var name = 'Tyler';
 
 //Code Here
   
+function myName() {
+  return 'Dave Sixta';
+}
 
 
 /*
@@ -80,6 +94,9 @@ var name = 'Tyler';
 
 //Code Here
 
+function newMyName(){
+  return myName();
+}
 
 
 /*
@@ -87,7 +104,7 @@ var name = 'Tyler';
 */
 
 // Code Here
-
+// alert(newMyName());
 
 
 ////////// PROBLEM 7 //////////
@@ -98,7 +115,11 @@ var name = 'Tyler';
 
 //Code Here
 
-
+function outerFn() {
+  return function (){
+    return 'Dave Sixta';
+  }
+}
 
 /*
   Now save the result of invoking outerFn into a variable called innerFn.
@@ -106,10 +127,11 @@ var name = 'Tyler';
 
 //Code Here
 
-
+var innerFn = outerFn();
 
 /* 
   Now invoke innerFn.
 */
+alert(innerFn());
 
 // Code Here
